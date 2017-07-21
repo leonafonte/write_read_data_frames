@@ -2,6 +2,7 @@
 
 
 nrOfRows <- 1e7
+#
 x <- data.frame(
   Integers = 1:nrOfRows,  # integer
   Logicals = sample(c(TRUE, FALSE, NA), nrOfRows, replace = TRUE),  # logical
