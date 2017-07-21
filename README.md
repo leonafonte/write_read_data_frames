@@ -22,6 +22,7 @@ tw_saveRDS <- system.time({
   saveRDS(x, "c:/R/Github/saveRDS.rds")  
 
 })
+
 tw_saveRDS
 
 ## Gravando saveRDS não comprimido
@@ -30,6 +31,7 @@ tw_saveRDS_nc <- system.time({
   saveRDS(x, "c:/R/Github/saveRDS_nc.rds", compress = F)  
 
 })
+
   tw_saveRDS_nc
 
 ## Lendo saveRDS comprimido
@@ -45,6 +47,7 @@ tr_saveRDS_nc <- system.time({
   readRDS("c:/R/Github/saveRDS_nc.rds")  
 
 })
+
   tw_saveRDS
 
   tw_saveRDS_nc
@@ -67,6 +70,7 @@ tw_feather <- system.time({
   write_feather(x, "c:/R/Github/feather.feather")
 
 })
+
 tw_feather
 
 ## Lendo com feather
@@ -75,6 +79,7 @@ tr_feather <- system.time({
   read_feather("c:/R/Github/feather.feather")
 
 })
+
 tr_feather
 
 ## Lendo alguns registros com feather
@@ -97,6 +102,7 @@ tw_fst <- system.time ({
   write.fst(x, "c:/R/Github/datafst.fst")
 
 })
+
 tw_fst
 
 ## Lendo fst
@@ -105,6 +111,7 @@ tr_fst <- system.time ({
   a <- read.fst("c:/R/Github/datafst.fst") 
 
 }) 
+
 tr_fst
 
 head(a)
@@ -117,6 +124,7 @@ tr_fst_slice <- system.time ({
   b <- read.fst("c:/R/Github/datafst.fst", c("Logicals", "Text"), 2000, 4990) 
 
 }) 
+
 tr_fst_slice
 
 b
@@ -137,6 +145,7 @@ tw_fwrite <- system.time ({
   fwrite(x, "c:/R/Github/fwrite.csv")
 
 }) 
+
 tw_fwrite  
 
 ## Lendo com fread
@@ -145,6 +154,7 @@ tr_fread <- system.time ({
   fread("c:/R/Github/fwrite.csv")
 
 })
+
 tr_fread
 
 
